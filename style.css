@@ -1,0 +1,335 @@
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.15);
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.25s ease;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    padding-top: 10rem;
+}
+
+/* ================= CONTAINER ================= */
+section {
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* ================= HEADER ================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: var(--border);
+    background-color: rgba(1, 1, 3, 0.95);
+}
+
+.header section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 170px;
+}
+
+/* NAV */
+.navbar a {
+    margin: 0 1.2rem;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+/* ================= HOME ================= */
+.home-container {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url("imagens/home-img.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.home-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.85), rgba(0,0,0,0.4));
+}
+
+.home-container .content {
+    position: relative;
+    z-index: 2;
+    max-width: 65rem;
+}
+
+.content h3 {
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.content p {
+    font-size: 2rem;
+    line-height: 1.9;
+    color: #f1f1f1;
+    font-weight: 300;
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    padding: 1.4rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: 0.7rem;
+}
+
+/* ================= TITULOS ================= */
+.title {
+    font-size: 5rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+}
+
+.title span {
+    color: #fff;
+}
+
+/* ================= ABOUT ================= */
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    background: var(--black);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+}
+
+.about .row .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 4rem;
+}
+
+.about .row .content h3 {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.about .row .content p {
+    font-size: 1.9rem;
+    line-height: 2;
+    color: #f1f1f1;
+    font-weight: 300;
+    text-transform: none;
+    margin-bottom: 3rem;
+}
+
+/* ================= MENU ================= */
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.menu .box-container .box {
+    background: var(--black);
+    border-radius: 2rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+/* imagem */
+.menu .box-container .box img {
+    height: 13rem;
+    margin-bottom: 2rem;
+}
+
+/* nome produto */
+.menu .box-container .box h3 {
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+/* descrição MELHORADA */
+.menu .box-container .box p {
+    font-size: 1.8rem;
+    line-height: 1.9;
+    color: #f0f0f0;
+    font-weight: 300;
+    text-transform: none;
+    margin-bottom: 2rem;
+}
+
+/* preço */
+.menu .box-container .box .price {
+    font-size: 2.4rem;
+    color: var(--main-color);
+}
+
+.menu .box-container .box .price span {
+    text-decoration: line-through;
+    font-size: 1.6rem;
+    color: #888;
+}
+
+/* ================= REVIEW ================= */
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.review .box-container .box {
+    background: var(--black);
+    border-radius: 2rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.review .box-container .box p {
+    font-size: 1.8rem;
+    color: #f1f1f1;
+    line-height: 2;
+    font-weight: 300;
+}
+
+/* nome clientes */
+.review .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-top: 1rem;
+}
+
+/* ================= ADDRESS ================= */
+.address .row iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 1rem;
+}
+
+.address .info {
+    background: var(--black);
+    padding: 5rem 3rem;
+    text-align: center;
+}
+
+.address .info h3 {
+    font-size: 3.5rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.address .info p {
+    font-size: 2rem;
+    color: #f1f1f1;
+    line-height: 2.2;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: var(--black);
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* redes sociais sem azul */
+.footer .share a {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0 1rem;
+}
+
+.footer .share a:hover {
+    color: var(--main-color);
+}
+
+/* copyright maior e lado direito */
+.footer .credit {
+    font-size: 2.3rem;
+    color: #f1f1f1;
+    font-weight: 500;
+    text-align: right;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    section {
+        padding: 2rem 1.5rem;
+    }
+
+    .menu .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about .row {
+        flex-direction: column;
+    }
+
+    .content h3 {
+        font-size: 3.2rem;
+    }
+
+    .content p {
+        font-size: 1.6rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer .credit {
+        text-align: center;
+    }
+}
